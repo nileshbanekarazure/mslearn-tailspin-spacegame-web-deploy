@@ -79,6 +79,6 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Azure App Service Deploy: website'
             inputs:
-              azureSubscription: 'AzureResourceMgr - tailspin-space-game-rg'
+              azureSubscription: 'AzureResourceMgr'
               appName: '$(WebAppName)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
