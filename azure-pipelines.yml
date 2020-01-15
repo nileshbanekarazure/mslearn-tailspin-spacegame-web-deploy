@@ -71,13 +71,13 @@ stages:
     variables:
     - group: Release
     strategy:
-      runonce:
+      runOnce:
         deploy:
           steps:
           - download: current
             artifact: drop
           - task: AzureWebApp@1
-            displayNane: 'Azure App Service Deploy: website'
+            displayName: 'Azure App Service Deploy: website'
             inputs:
               azureSubscription: 'Recource Manager - Tailspin - Space Game'
               appName: '$(WebAppName)'
